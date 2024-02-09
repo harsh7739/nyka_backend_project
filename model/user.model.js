@@ -1,14 +1,6 @@
 const mongoose = require("mongoose");
 
-/*
-id (unique identifier)
-name (string, 1-50 characters)
-avatar (string, URL)
-email (string, valid email format)
-password (string)
-created_at (timestamp, automatically set when the user is created)
-updated_at (timestamp, automatically updated when the user is updated)
-*/
+
 const userSchema = mongoose.Schema(
   {
     username: { type: String, required: true, minlength: 3, maxlength: 30 },

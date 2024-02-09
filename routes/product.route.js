@@ -5,7 +5,7 @@ const { ProductModel } = require("../model/product.model");
 const productRouter = Router();
 
 
-// For getting All Data
+// For getting All Post
 
 
 productRouter.get("/", async (req, res) => {

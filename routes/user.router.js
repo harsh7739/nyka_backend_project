@@ -2,12 +2,14 @@
 const { Router } = require("express");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { UserModel } = require("../model/user.model");
+const {UserModel} = require("../model/user.model")
 
 const userRouter = Router();
 
 userRouter.post("/register", async (req, res) => {
+  console.log(req.body)
   const { username,avatar, email, password } = req.body;
+ 
   try {
   
     const isEmailExists = await UserModel.findOne({ email });
